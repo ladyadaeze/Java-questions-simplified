@@ -1,0 +1,110 @@
+
+Q1. Write a program which reads a sequence of positive integers. The program stops when the user fills a negative value and shows the maximum and minimum of these numbers.
+
+
+Answer: 
+
+Scanner scan = new Scanner(System.in)
+
+int n = scan.nextInt(); 
+int max = n;
+int min = n; 
+
+if(n >= 0) {
+ 	while(true) {
+ n = scan.nextInt();
+ if (n < 0) 
+break; 
+
+max = n > max ? n : max;
+min = n < min ? n : min;  }
+
+System.out.println("min is " + min + " max is " + max);  }
+else
+System.out.println(n + " is invalid!");
+
+
+This is not the explanation. This is breaking down the question:
+1.	The question is asking you to read the first value (number) given by the user. 
+2.	The computer will then decide if it should enter the number into a maximum variable or a minimum variable (max and min).
+3.	So you need to make 2 variables. A variable that will represent the maximum (max) and a variable that will represent the minimum (min).
+4.	The 1st input you get from the user is the maximum and the minimum
+5.	You will keep updating the maximum and the minimum as long as the user is adding positive values unto the computer. 
+6.	When you have added the number to the maximum and minimum variable, you will continue reading values from the user.
+7.	Each time the computer sees a new number, it checks to see if the new number is greater than the maximum number.
+8.	If the new number is greater than the maximum number, it updates the maximum number.
+9.	If the new number is less than the minimum, this means that the computer has to update the minimum number.
+10.	When the user enters a negative number, the programme will stop.
+
+11.	For example, if the user enters the number 3
+12.	n will be equal to 3 [n = 3]
+13.	The maximum number will be equal to 3 and the minimum number will also be equal to 3.
+14.	max = 3;
+min = 3;
+15.	If the user enters another number into the computer, for instance [n = 5].
+16.	5 will be the new maximum number and 3 will remain as the old minimum number.
+17.	If the user enters another number into the computer, for instance [ n = 2 ].
+18.	5 will remain as the maximum number because 3 Is not greater than 5. 
+19.	But 2 will be the new minimum number because  2 is less than 3.
+20.	If the user enters a negative number, for instance: ‘-1’, the programme will stop and it will display the max and min number.
+
+int n = scan.nextInt(); 
+int max = n;
+int min = n; 
+
+Rationale:
+
+1.	Take the 1st input from the user
+
+int n = scan.nextInt(); 
+
+2.	This automatically becomes the maximum number and the minimum number.
+3.	Create a variable called max and min.
+int max = n;
+int min = n; 
+
+
+4.	Now you need to create an if statement. This if statement will check to see that the user number is greater than or equal to 0.  
+
+if(n >= 0) {
+
+5.	For this if statement to run, you need a while loop.
+6.	This is because you want to keep reading values from a user until they enter a negative number, you need to make a ‘while’ loop.
+
+while(true) {
+
+7.	This while loop has to be an infinite loop that doesn’t stop running. Because you don’t know how many numbers the user will keep putting positive numbers  into the computer and the loop will keep running.
+8.	That’s why you use the ‘true’ statement.
+9.	You need to read another input from the user and you’re going to store this input into the variable n.
+
+while(true) {
+n = scan.nextInt();
+
+
+10.	Remember, you have to stop the loop when n is a negative number.
+
+if (n < 0) 
+break; 
+
+11.	So this means if n is less than 0 (negative). Stop the loop by using a ‘break’ statement.
+12.	BUT!!! If ‘n’ is NOT a negative number, you need to update the loop
+13.	Here’s how:
+max = n > max ? n : max;
+
+14.	Read the first statement like this: if n is greater than the maximum number, make n the maximum number.  If it’s not, the maximum number remains the same.
+
+
+min = n < min ? n : min;  }
+
+15.	Read this statement like this: if n is less than the minimum number, then n becomes the minimum number. If it is not, the minimum number stays the same.
+
+System.out.println("min is " + min + " max is " + max);  }
+
+
+16.	Outside the for loop you have to print out which is the max and which is the min.
+17.	Outside the next loop make an else statement
+18.	This is for any decimal numbers that may be added by mistake.
+19.	Write another statement that reads:
+
+else  System.out.println(n + " is invalid!");
+
