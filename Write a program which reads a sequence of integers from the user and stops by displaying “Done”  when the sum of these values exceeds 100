@@ -1,0 +1,114 @@
+
+Q1. Write a program which reads a sequence of integers from the user and stops by displaying “Done” 
+when the sum of these values exceeds 100
+
+Answer: 
+
+Scanner scan = new Scanner(System.in);
+
+int sum = 0;
+while(true) {
+System.out.print(“Enter a number: ”);
+Sum +=  scan.nextInt();
+
+if (sum > 100)
+	break;
+}
+System.out.println(“Done:  ”  +  sum);
+
+}
+
+And alternative answer could be with the do-while loop
+
+int sum = 0;
+do {
+System.out.println(“Enter a number: ”)
+sum += scan.nextInt();
+}
+while(sum <= 100);
+
+System.out.println(“Done: ” + sum);
+}
+}
+
+
+This is not the explanation. 
+This is breaking down the question:
+
+
+1.	Keep track of the sum of the values that the user enters
+2.	Make (declare) a variable sum to store the sum of these values
+3.	Read values from the user and add them to sum as long as sum is less than or equal to 100.
+
+sum <= 100
+
+4.	When the sum exceeds 100, you have to say “Done!”
+
+sum > 100 
+System.out.println(“Done!”);
+
+
+Rationale:
+
+1.	To read values from the user, you need to use a scanner object.
+
+Scanner scan = new Scanner(System.in();
+
+2.	Create a variable “sum” to keep track of the sum of the variables that the user enters
+
+int sum = 0;
+
+3.	The initial value of sum has to be zero
+4.	You want to keep reading values from a user
+5.	You also don’t know how many values the user is going to enter
+6.	That’s why you use and infinite loop 
+
+while(true)
+
+7.	Tell the user to enter a number
+
+while(true){
+System.out.print(“Enter a number: ”)
+}
+
+8.	Read a number from the user and add it to the variable ‘sum’.
+
+sum += scan.nextInt(); 
+
+9.	Each time you read a number from the user, you have to add it to the variable sum.
+
+while(true){
+System.out.print(“Enter a number: ”)
+sum += scan.nextInt(); 
+
+}
+
+10.	This is an infinite loop and it will never stop
+11.	The way to break out from this loop is to use an ‘if’ statement.
+
+12.	If the sum is greater than 100, you have to stop
+
+if(sum > 100)
+break;
+
+13.	After you break out of the loop, print done.
+
+System.out.println(“Done:  ”  +  sum);
+
+
+14.	You add (concatenate) the sum to the word done, so you can see the sum of the values you have entered.
+
+
+If you still don’t know what is going on:
+
+1.	If the user enters the number 20
+2.	20 is added to the variable sum
+3.	Then the loop checks to see if 20 is greater than 100
+4.	This is false
+5.	So the ‘break’ statement doesn’t get executed.
+6.	The while loop will continue to run.
+7.	Since the condition is true, the computer asks the user to enter another number
+8.	If the user adds 40 to the sum, the sum becomes 60 because of the previous 20 in it.
+9.	This continues till the sum is greater than 100 and the loop stops.
+10.	The output says “Done.”
+
