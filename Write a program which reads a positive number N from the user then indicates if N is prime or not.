@@ -1,0 +1,100 @@
+
+Q1. Write a program which reads a positive number N from the user then indicates if N is prime or not.
+Answer: 
+
+Scanner scan = new Scanner(System.in);
+
+System.out.print(“Enter a number: ”);
+int n = scan.nextInt();
+
+int sum = 1;
+for(int i = 2; i <= n/2; i++)
+if(n % i = = 0)
+sum +=  i;
+
+System.out.println(sum = = 1 ? “prime” : “not prime”);
+
+
+System.out.print(“Enter a number: ”);
+int n = scan.nextInt();
+
+boolean isPrime = true;
+for(int i = 2; i <= n/2; i++)
+if(n % i = = 0){
+isPrime = false;
+break;
+}
+System.out.println(isPrime ? “prime” : “not prime”);
+
+
+This is not the explanation. 
+This is breaking down the question:
+
+
+1.	A prime number is a number that divides only by 1 and itself (n).
+2.	‘3,5,7’ are prime numbers 
+3.	Because 3 can only be divided by 1 and 3. 
+4.	5 can only be divided by 1 and 5 etc.
+5.	10 is not a prime numbers because it can be divided by 2,5,1 and 10.
+6.	The divisors of a prime number are only 1 and n
+7.	So if ‘n’ is a prime number, the sum of its divisors is 1 + ‘n’.
+8.	The sum of its strict divisors is equal to 1
+9.	To find if ‘n’ is a prime number, we will calculate the sum of it’s strict divisors.
+10.	If the sum is equal to 1 (sum = = 1), then ‘n’ is a prime number.
+11.	If the sum is not equal to one (sum ! = 1), then n is not a prime number.
+
+
+
+1.	You have to iterate all the possible divisors except 1 and ‘n’
+2.	Test if ‘i’ is a divisor of ‘n’.
+3.	‘i’ is the variable that you are going to use inside the loop.
+4.	If ‘i’ is a divisor of ‘n’ the ‘n’ is not prime
+5.	If you find at least 1 divisor of n, other than 1 and n; immediately you know that n is NOT a prime number. 
+6.	‘n’ is a prime number if no divisors where found.
+
+
+for(int i = 2; i <= n/2; i++)
+if(n % i = = 0)
+sum +=  i;
+
+
+Rationale:
+1.	You are iterating over all the possible divisors other than 1 and ‘n’.
+2.	In each iteration, you are testing if ‘i’ is a divisor of n. 
+3.	If the ‘if condition is true:
+if(n % i = = 0)
+
+4.	Immediately, we know that n is NOT a prime number.
+5.	Because we found a divisor other than 1 and ‘n’
+6.	Remember you are starting your iteration from 2
+ 
+int i = 2;
+
+7.	till
+ 
+ i = n / 2;
+
+8.	So you are not iterating over ‘n’ and you are not iterating over 1.
+if(n % i = = 0)
+
+9.	Whenever this condition is true, ‘n’ is NOT a prime number 
+
+
+
+
+If you still don’t know what is going on:
+
+1. You use a Boolean variable ‘isPrime’
+2. Suppose variable ‘n’ is a prime number
+3. You initialise ‘isPrime’ to be true
+
+Boolean = isPrime = true;
+
+4. Inside the if statement, set isPrime = false; 
+
+5. If you type in ‘n’ and at some point you find a divisor other than 1 and ‘n’
+6. You are saying that ‘n’ is not prime number
+7. You are setting ‘isPrime’ to be false
+
+
+
