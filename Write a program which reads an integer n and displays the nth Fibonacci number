@@ -1,0 +1,58 @@
+
+Q1. Write a program which reads an integer n and displays the nth Fibonacci number.
+Answer: 
+
+Scanner scan = new Scanner(System.in);
+
+System.out.print(“Enter a positive integer n: ”);
+int n = scan.nextInt();
+
+int result = 0;
+int v1 = 1;
+int v2 = 1;
+for(int i = 1; i <= n-2; i++){
+result = v1 + v2;
+v1 = v2;
+v2 = result;
+
+}
+System.out.println(“result = ” + result);
+
+
+
+This is not the explanation. 
+This is breaking down the question:
+
+
+ Q1. What is the Fibonacci sequence?
+
+Answer: This is a sequence of numbers where the first two numbers in the sequence are 1 and 1.
+Then, each additional Fibonacci number is the sum of two previous numbers in the sequence:
+
+1,1,2,3,5,8,13,21....
+
+
+To get the nth Fibonacci number we need n-2steps
+
+Watch loops in Java (Exercise 7) Neso Academy :
+https://www.youtube.com/watch?v=e49tD9XaCWQ&list=PLBlnK6fEyqRjKA_NuK9mHmlk0dZzuP1P5&index=72&ab_channel=NesoAcademy
+
+
+Rationale:
+
+1.	Store inside a variable called ‘n’
+2.	To run n-2 iterations, I  should be less than or equal to n-2
+3.	Increment I by 1
+
+
+
+
+
+
+
+
+
+
+
+
+
