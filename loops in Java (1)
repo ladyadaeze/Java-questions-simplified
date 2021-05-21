@@ -1,0 +1,57 @@
+Scanner scan = new Scanner(System.in);
+		
+		/* You want to print a line of stars if you're in the 1st line or last line.
+		 * You have to execute this loop  below if you're in the first line or last line.
+		 * 
+		 * for(int i = 1; i <= n; i++){
+			  System.out.print("*");
+		 * 
+		 * 1. You are printing 'n' lines
+		 * 2. In each iteration, you will check if you are in the 1st line (i == 1) or last line (i == n)
+		 * 3. If this is true, you are going to print a line of stars.[ for(int j = 1; j <= n; j++) System.out.print("*");]
+		   4. If this is not true, you're going to print 'n' things.  [for(int j = 1; j <= n; j++)]
+		 * 5. The 1st thing and the last thing will be a star ("*") 
+		 * if(i == 1 || i == n) System.out.print("*");
+		 * and all the other things will be spaces (" ")
+		 * else System.out.print(" ");
+
+		 */
+		 
+		System.out.println("Please enter a number: ");
+		int n = scan.nextInt();
+
+		 
+		
+		  for(int i = 1; i <= n; i++){
+			  if(i == 1 || i == n) //if you are in the first line or last line, you are printing a line of stars
+			  // if this condition is false, you are not in the 1st line or last line.
+				 
+				  for(int j = 1; j <= n; j++) 
+				  System.out.print("*");
+			  		
+			  else 
+				  for(int j = 1; j <= n; j++) //if j = 1 or j = n; this means you want to print a star.
+					// because j = 1 is the position of the 1st star and j <=n is the position of the last star.
+					  if(i == 1 || i == n)
+						  System.out.print("*");
+			  			//if the condition is false, you want to print a space
+					  else
+						  System.out.print(" ");
+
+
+				
+					  
+					  
+					  
+					  System.out.println();
+
+				  
+
+			  }
+		
+		
+		
+	}
+	}
+
+	
