@@ -1,4 +1,34 @@
 Scanner scan = new Scanner(System.in);
+/* To print this with an input from the user
+
+***
+***
+***
+
+ This is the code needed:
+ 
+ System.out.println("Enter a number: ")
+ int n = scan.nextInt();
+ 
+ for(int i = 1; i <= n; i++){
+ 	for(int j = 1; j <= n; j++){
+	
+System.out.println("*");
+System.out.println();
+	}
+}
+
+To print this :
+
+*****
+*   *
+*   *
+*   *
+*****
+
+This is the code needed. Here's a step by step explaination:
+	
+*/
 		
 		/* You want to print a line of stars if you're in the 1st line or last line.
 		 * You have to execute this loop  below if you're in the first line or last line.
