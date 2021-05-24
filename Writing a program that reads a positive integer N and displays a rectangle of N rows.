@@ -1,0 +1,53 @@
+		
+		Scanner scan = new Scanner(System.in);
+		
+
+		System.out.println("Please enter a number: ");
+		int n = scan.nextInt();
+		
+		for(int i = 1; i <= n; i++) {
+			if(i == 1 || i == n) 
+				for(int j = 1; j <= n; j++) 
+					System.out.print("*");
+			
+			else
+				for(int j = 1; j <= n; j++) 
+					if(j == 1 || j == n) 
+						System.out.print("*");
+			
+					else
+						System.out.print(" ");
+			
+			System.out.println();
+		}
+		
+		}
+		}
+		
+/* First of all you are printing n lines.
+ * in each iteration, you will check if you are in the first line or last line 
+ 
+ if(i == 1 || i == n)
+ 
+ * if this is true
+ * you are going to print a line of stars.
+ for(int j = 1; j <= n; j++) 
+	System.out.print("*");
+	
+ 
+ * if this is not true, you are going to print n things.
+ 
+ 'else'
+ 
+ *The first thing and the last thing will be a star
+ 
+ if(j == 1 || j == n)
+ 
+ *and all the other things will be spaces
+ 
+ else
+	System.out.print(" ");
+	
+
+*/	
+		
